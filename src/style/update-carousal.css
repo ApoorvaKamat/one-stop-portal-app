@@ -2,10 +2,10 @@
     background-color:  #563d7c;
 }
 .carousel {
-	width: 17.125rem;
-    height: 14.125rem;
+	width: 22.125rem;    
+	height: 14.125rem;
 	position: relative;
-    perspective: 207.5rem;    
+    perspective: 250rem;    
     left: 50%;
     transform: translate(-50%);
 }
@@ -15,22 +15,22 @@
 	height: 100%;
 	position: absolute;
 	transform-style: preserve-3d;
-	transition: transform 1s;
+	transition: transform 3s;
 }
 
 .carousel__slide {
 	position: absolute;
-	width: 11.875rem;
-	height: 11.875rem;
+	width: 20rem;
+	height: 12rem;
 	left: 0.625rem;
 	top: 0.625rem;
-	border: 0.125rem solid;
+	border: 0.125rem solid #563d7c;
 	transition: transform 1s, opacity 1s;
 }
 
 .carousel__slide img {
 	width: 100%;
-	height: auto;
+	height: 100%;
 	display: block;
 }
 
@@ -72,8 +72,6 @@
 	flex-flow: row wrap;
 	align-items: center;
 	justify-content: space-between;
-    padding-left: 15%;
-    padding-right: 15%;
 }
 
 .carousel__control {

@@ -30,7 +30,7 @@ export function UpdateCarousel() {
             </Row>
         </Container>
        <div className="position-relative">
-          <Carousel items={items} itemWidth={310} />
+          <Carousel items={items} itemWidth={410} />
        </div>
         
     </>
