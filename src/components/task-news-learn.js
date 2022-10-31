@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { TaskTable } from "./task-table";
+import BasicExample from "./card"
 //import { Calender } from "./calender";
 
 export function TaskNewsLearn() {
@@ -27,6 +28,9 @@ export function TaskNewsLearn() {
                 <Col sm={5} id="news" className="border-end border-dark">
                     <Row>
                         <Col className="bg-subhead"><h4 className="pt-2 text-white">NEWS AND SOCIAL MEDIA</h4></Col>
+                    </Row>
+                    <Row>
+                        <BasicExample></BasicExample>
                     </Row>
                 </Col>
                 <Col sm={3}id="learning" className="border-end border-dark">
