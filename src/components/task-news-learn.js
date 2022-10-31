@@ -15,7 +15,7 @@ export function TaskNewsLearn() {
                     <Row>
                         <Col className="bg-subhead"><h4 className="pt-2 text-white">TODAY'S TASKS</h4></Col>
                     </Row>
-                    <Row className="h-35 overflow-auto">
+                    <Row className="h-25 overflow-auto">
                         <TaskTable />
                     </Row>
                     <Row>
