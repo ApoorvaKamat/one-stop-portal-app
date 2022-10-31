@@ -1,9 +1,9 @@
 import Table from 'react-bootstrap/Table';
-
+import '../style/task-table.css'
 export function TaskTable() {
   return (
     <Table responsive striped bordered hover>
-      <thead className='bg-dark position-sticky'>
+      <thead className='fixed-head bg-dark position-sticky'>
         <tr>
           <th className='text-white'>Tasks</th>
           <th className='text-white'>Due</th>
