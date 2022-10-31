@@ -29,7 +29,7 @@ export function UpdateCarousel() {
                 <Col><h4 className="pt-2 text-white">UPDATES</h4></Col>
             </Row>
         </Container>
-       <div className="position-relative">
+       <div className="position-relative overflow-hidden">
           <Carousel items={items} itemWidth={410} />
        </div>
         
