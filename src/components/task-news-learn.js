@@ -3,7 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { TaskTable } from "./task-table";
-//import { Calender } from "./calender";
+import { Calendar } from "./calendar";
 
 export function TaskNewsLearn() {
   return (
@@ -18,10 +18,10 @@ export function TaskNewsLearn() {
                         <TaskTable />
                     </Row>
                     <Row>
-                        <Col className="bg-subhead"><h4 className="pt-2 text-white">CALANDER</h4></Col>
+                        <Col className="bg-subhead"><h4 className="pt-2 text-white">CALENDAR</h4></Col>
                     </Row>
                     <Row className="h-50 overflow-auto">
-                        <TaskTable />{/*Add calender here*/}
+                        <Calendar />{/*Add calender here*/}
                     </Row>
                 </Col>
                 <Col sm={5} id="news" className="border-end border-dark">

@@ -12,7 +12,7 @@ import "@fullcalendar/timegrid/main.css";
 
 import events from "../assets/events";
 
-export function Calender() {
+export function Calendar() {
   return (
     <>
         <FullCalendar

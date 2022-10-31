@@ -1,0 +1,27 @@
+.fixed_head {
+    width: 300px;
+    table-layout: fixed;
+    border-collapse: collapse;
+  }
+.fixed_head tbody {
+    display: block;
+    width: 100%;
+    overflow: auto;
+    height: 200px;
+}
+.fixed_head thead tr {
+    display: block;
+    font-size: medium;
+}
+.fixed_head thead {
+    background: black;
+    color: #fff;
+}
+.fixed_head th,
+.fixed_head td {
+    padding: 1px;
+    text-align: center;
+    width: 150px;
+    font-size: medium;
+    box-shadow: inset 1px -1px #000;
+}
