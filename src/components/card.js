@@ -3,29 +3,20 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/Button';
-import React, { useState } from 'react';
 import ToggleButton from 'react-bootstrap/ToggleButton';
 import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
 
 
 
 
-function BasicExample() {
+function NewsCard() {
   return (
     <Card style={{ width: '100rem' }}>
     <ListGroup variant="flush">
       <ListGroup.Item>
       <Container>
       <Row>
-        <Col sm={4}><img src="/sharerise.jpeg" class="img-reponsive img-thumbnail" alt="update1"/>
-        
-    <>
-    
-      
-      
-    </>
-</Col>
+        <Col sm={4}><img src="/sharerise.jpeg" class="img-reponsive img-thumbnail" alt="update1"/></Col>
         <Col sm={8}>The company shares rised by 5% yesterday.Click here to know more<br></br>
         <ToggleButtonGroup type="checkbox" name="options" defaultValue={1}>
         <ToggleButton id="tbg-check-1" value={1}>
@@ -155,4 +146,4 @@ function BasicExample() {
   );
 }
 
-export default BasicExample;
+export default NewsCard;
