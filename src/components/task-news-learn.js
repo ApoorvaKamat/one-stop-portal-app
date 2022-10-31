@@ -5,6 +5,8 @@ import Col from 'react-bootstrap/Col';
 import { TaskTable } from "./task-table";
 import NewsCard from "./card"
 import { Calendar } from "./calendar";
+import { LearningModules } from "./learning-modules";
+import { Conversations } from "./conversations";
 
 export function TaskNewsLearn() {
   return (
@@ -35,6 +37,15 @@ export function TaskNewsLearn() {
                 <Col sm={3}id="learning" className="border-end border-dark">
                     <Row>
                         <Col className="bg-subhead"><h4 className="pt-2 text-white">LEARNING MODULES</h4></Col>
+                    </Row>
+                    <Row>
+                        <LearningModules />
+                    </Row>
+                    <Row>
+                        <Col className="bg-subhead"><h4 className="pt-2 text-white">CONVERSATIONS</h4></Col>
+                    </Row>
+                    <Row>
+                        <Conversations />
                     </Row>
                 </Col>
         </Row>
