@@ -9,8 +9,7 @@ import { Calendar } from "./calendar";
 export function TaskNewsLearn() {
   return (
     <>
-        <Container fluid>
-            <Row>
+         <Row>
                 <Col sm={4} id="task-caleder" className="border-end border-dark">
                     <Row>
                         <Col className="bg-subhead"><h4 className="pt-2 text-white">TODAY'S TASKS</h4></Col>
@@ -38,8 +37,7 @@ export function TaskNewsLearn() {
                         <Col className="bg-subhead"><h4 className="pt-2 text-white">LEARNING MODULES</h4></Col>
                     </Row>
                 </Col>
-            </Row>
-        </Container>
+        </Row>
     </>
   );
 }
