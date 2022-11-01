@@ -94,7 +94,6 @@ export function Conversations() {
                                     </div>
                                 </div>
                             </li>
-
                         </MDBTypography>
                     </MDBCardBody>
                 </MDBCard>
