@@ -3,3 +3,9 @@
     top: 0;
     z-index: 2;
 }
+.w-sm-4rem {
+    width: 4rem;
+}
+.tableBody:nth-child(even){
+    background-color: rgb(185, 194, 237);
+}

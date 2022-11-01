@@ -5,22 +5,20 @@ export function TaskTable() {
   
   return (
     <>
-    <Container className='w-100'>
-      <Row id='tableHeader'>
-          <Col sm={6} className="border border-dark text-white bg-dark">Tasks</Col>
-          <Col sm={2} className="border border-dark text-white bg-dark">Due</Col>
-          <Col sm={4} className="border border-dark text-white bg-dark">Status</Col>
-      </Row>
+      <div id='tableHeader'class="d-flex bd-highlight bg-dark text-white">
+        <div class="flex-fill bd-highlight border border-dark w-sm-4rem">Tasks</div>
+        <div class="flex-fill bd-highlight border border-dark w-sm-4rem">Due</div>
+        <div class="flex-fill bd-highlight border border-dark w-sm-4rem">Status</div>
+      </div>
       {
         tasks.map(task => (
-          <Row key={task.id}>
-              <Col sm={6} className="border border-dark tableText">{task.tName}</Col>
-              <Col sm={2} className="border border-dark tableText">{task.dueDate}</Col>
-              <Col sm={4} className="border border-dark tableText">{task.progress}</Col>
-          </Row>
+          <div key={task.id} className="d-flex bd-highlight px-0 tableBody">
+              <div className="flex-fill bd-highlight border-bottom border-dark w-sm-4rem">{task.tName}</div>
+              <div className="flex-fill bd-highlight border-bottom border-start border-end border-dark w-sm-4rem">{task.dueDate}</div>
+              <div className="flex-fill bd-highlight border-bottom border-dark w-sm-4rem">{task.progress}</div>
+          </div>
         ))
       }
-    </Container>
     </>
   );
 }
