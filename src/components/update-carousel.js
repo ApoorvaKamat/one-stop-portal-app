@@ -16,7 +16,7 @@ export function UpdateCarousel() {
     content: (
       <div>
         <strong>{_.discription}</strong>
-        <span>Slide number {_.id}</span>
+        {/* <span>Slide number {_.id}</span> */}
       </div>
     )
   }));

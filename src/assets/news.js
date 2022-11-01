@@ -26,7 +26,7 @@ export const news =[
     },
     {
         id:6,
-        discription: 'OneStopGraphica Recognized as a Leader in IDC MarketScape Worldwide Managed Cloud Security Services. Click to read more',
-        imageSrc: '/cloud.jpg',
+        discription: 'New card released Click to read more',
+        imageSrc: '/growth.jpg',
     },
 ]
