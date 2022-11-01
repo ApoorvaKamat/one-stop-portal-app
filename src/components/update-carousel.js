@@ -6,18 +6,17 @@ import '../style/update-carousal.css';
 //import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { Carousel, CarouselItem } from 'react-round-carousel';
+import { carouselUpdates } from "../assets/carouselUpdates";
 
 
 export function UpdateCarousel() {
-  const items = Array(10)
-  .fill('')
-  .map((_, index) => ({
-    alt: 'A random photo',
-    image: `https://picsum.photos/${210 + index}`,
+  const items = carouselUpdates.map((_, index) => ({
+    alt: _.discription,
+    image: _.imageSrc,
     content: (
       <div>
-        <strong>Round Carousel</strong>
-        <span>Slide number {index + 1}</span>
+        <strong>{_.discription}</strong>
+        <span>Slide number {_.id}</span>
       </div>
     )
   }));
