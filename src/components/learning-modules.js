@@ -21,25 +21,29 @@ export function LearningModules() {
             <Container >
                     <MDBListGroupItem
                         className=" d-flex align-items-center border-0 mb-2 rounded"
-                        style={{ backgroundColor: "#b9c2ed" }}
+                        style={{ backgroundColor: "#b9c2ed", textDecoration:"line-through" }}
                     >
                         <MDBCheckbox
                             name="flexCheck"
                             value=""
                             id="flexCheck"
                             className="me-3"
+                            checked="true"
+                            style={{ width:"3em", height:"3em" }}
                         />
                         IT Compliance
                     </MDBListGroupItem>
                     <MDBListGroupItem
                         className=" d-flex align-items-center border-0 mb-2 rounded"
-                        style={{ backgroundColor: "#b9c2ed" }}
+                        style={{ backgroundColor: "#b9c2ed", textDecoration:"line-through" }}
                     >
                         <MDBCheckbox
                             name="flexCheck"
                             value=""
                             id="flexCheck"
                             className="me-3"
+                            checked="true"
+                            style={{ width:"3em", height:"3em" }}
                         />
                         Tax compliance
                     </MDBListGroupItem>
@@ -52,6 +56,8 @@ export function LearningModules() {
                             value=""
                             id="flexCheck"
                             className="me-3"
+                            disabled="true"
+                            style={{ width:"3em", height:"3em" }}
                         />
                         React JS
                     </MDBListGroupItem>
@@ -64,6 +70,8 @@ export function LearningModules() {
                             value=""
                             id="flexCheck"
                             className="me-3"
+                            disabled="true"
+                            style={{ width:"3em", height:"3em" }}
                         />
                         AWS basics
                     </MDBListGroupItem>
