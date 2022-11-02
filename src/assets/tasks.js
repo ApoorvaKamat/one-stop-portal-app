@@ -34,4 +34,25 @@ export const tasks =[
       progress : 'Yet to start'
 
     },
+    {
+      id:6,
+      tName:'Complete Task 2 DP5',
+      dueDate : 'Nov 28',
+      progress : 'Yet to start'
+
+    },
+    {
+      id:7,
+      tName:'Begin DP6',
+      dueDate : 'Nov 29',
+      progress : 'Yet to start'
+
+    },
+    {
+      id:8,
+      tName:'Connect with TA to validate progress',
+      dueDate : 'Dec 2',
+      progress : 'Yet to start'
+
+    },
   ]
