@@ -2,25 +2,34 @@ import { Col, Container, Row } from 'react-bootstrap';
 import '../style/task-table.css';
 import { tasks } from '../assets/tasks';
 export function TaskTable() {
+  let url = 'https://jira.atlassian.com/';
   
   return (
     <>
-    <Container className='w-100'>
-      <Row id='tableHeader'>
-          <Col sm={6} className="border border-dark text-white bg-dark">Tasks</Col>
-          <Col sm={2} className="border border-dark text-white bg-dark">Due</Col>
-          <Col sm={4} className="border border-dark text-white bg-dark">Status</Col>
-      </Row>
+      <div id='tableHeader'className="d-flex bd-highlight bg-dark text-white">
+        <div class="flex-fill bd-highlight border border-dark w-sm-8rem">Tasks</div>
+        <div class="flex-fill bd-highlight border border-dark w-sm-1rem">Due</div>
+        <div class="flex-fill bd-highlight border border-dark w-sm-3rem">Status</div>
+      </div>
       {
         tasks.map(task => (
-          <Row key={task.id}>
-              <Col sm={6} className="border border-dark tableText">{task.tName}</Col>
-              <Col sm={2} className="border border-dark tableText">{task.dueDate}</Col>
-              <Col sm={4} className="border border-dark tableText">{task.progress}</Col>
-          </Row>
+          <div key={task.id} className="d-flex bd-highlight px-0 tableBody">
+              <div className="flex-fill bd-highlight border-bottom border-dark w-sm-8rem text-start px-1">
+                <a href={url} target='_blank' rel="noreferrer" className='text-decoration-none'>
+                  <span class="d-inline-block text-truncate" style={{ maxWidth: '100%'}}>
+                     {task.tName}
+                  </span> 
+                </a>
+                </div>
+              <div className="flex-fill bd-highlight border-bottom border-start border-end border-dark w-sm-1rem text-start px-2">{task.dueDate}</div>
+              <div className="flex-fill bd-highlight border-bottom border-dark w-sm-3rem text-start px-1">
+                  <span class="d-inline-block text-truncate" style={{ maxWidth: '100%'}}>
+                     {task.progress}
+                  </span> 
+              </div>
+          </div>
         ))
       }
-    </Container>
     </>
   );
 }
