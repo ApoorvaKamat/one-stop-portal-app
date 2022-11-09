@@ -1,6 +1,6 @@
 import { Home } from './modules/home';
 import { NavBar } from './components/navbar';
-import { ProjectHelp } from './modules/projectHelp';
+// import { ProjectHelp } from './modules/projectHelp';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter,  Route, Routes } from 'react-router-dom';
