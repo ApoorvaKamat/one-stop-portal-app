@@ -4,6 +4,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { news } from '../assets/news';
 import * as Icon from 'react-bootstrap-icons';
+import React from 'react';
 
 export default function NewsCard() {
   return (
@@ -13,7 +14,7 @@ export default function NewsCard() {
                 <ListGroup.Item key={item.id}>
                     <Row>
                         <Col sm={4}>
-                            <img src={item.imageSrc} class="img-reponsive img-thumbnail" alt="..." />
+                            <img src={item.imageSrc} className="img-reponsive img-thumbnail" alt="..." />
                         </Col>
                         <Col sm={8}>
                             <Row>{item.discription}</Row>

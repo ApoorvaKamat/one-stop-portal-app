@@ -4,18 +4,18 @@ import {UpdateCarousel} from "../components/update-carousel";
 import {TaskNewsLearn} from "../components/task-news-learn"
 import { UserGuideModal } from "../components/user-guide-model";
 
-export function Home() {
+export function Home(props) {
     const [modalShow, setModalShow] = React.useState(true);
 
     return (
         <>
-        <NavBar />
         <UpdateCarousel />
         <TaskNewsLearn />
+        {
+        props.showModal?
         <UserGuideModal
         show={modalShow}
-        onHide={() => setModalShow(false)}
-      />
+        onHide={() => setModalShow(false)}/> :<></>}
         </>
     )
 }

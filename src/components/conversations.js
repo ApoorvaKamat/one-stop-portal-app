@@ -4,6 +4,7 @@ import {
     MDBCardBody,
     MDBTypography,
 } from "mdb-react-ui-kit";
+import React from 'react';
 
 
 export function Conversations() {

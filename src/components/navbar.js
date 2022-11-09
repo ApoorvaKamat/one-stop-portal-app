@@ -5,10 +5,11 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
 
-export function NavBar() {
+export function NavBar(props) {
+ 
   return (
     <Navbar  collapseOnSelect bg="dark" expand="sm" variant="dark">
-      <Navbar.Brand href="#home" className="px-3">One Stop Graphica Portal</Navbar.Brand>
+      <Navbar.Brand href='/'onClick={()=> props.displayhelpModal(false)} className="px-3">One Stop Graphica Portal</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="esponsive-navbar-nav">
           <Nav fill className="w-100">
@@ -19,7 +20,7 @@ export function NavBar() {
                 <Nav.Link href="#hrConnect">HR-Connect</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-                <Nav.Link href="#projectHelp">Project Help</Nav.Link>
+                <Nav.Link href="/portal/projectHelp">Project Help</Nav.Link>
             </Nav.Item>
             <Nav.Item>
                 <Nav.Link href="#knowYourCompnay">Know Your Company</Nav.Link>
