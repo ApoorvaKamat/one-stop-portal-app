@@ -1,4 +1,5 @@
 import { Container } from "react-bootstrap";
+import React from 'react';
 import Form from 'react-bootstrap/Form';
 import {
     MDBBadge,
@@ -28,7 +29,7 @@ export function LearningModules() {
                             value=""
                             id="flexCheck"
                             className="me-3"
-                            checked="true"
+                            defaultChecked
                             style={{ width:"3em", height:"3em" }}
                         />
                         IT Compliance
@@ -42,7 +43,7 @@ export function LearningModules() {
                             value=""
                             id="flexCheck"
                             className="me-3"
-                            checked="true"
+                            defaultChecked
                             style={{ width:"3em", height:"3em" }}
                         />
                         Tax compliance
@@ -56,7 +57,7 @@ export function LearningModules() {
                             value=""
                             id="flexCheck"
                             className="me-3"
-                            disabled="true"
+                            disabled={true}
                             style={{ width:"3em", height:"3em" }}
                         />
                         React JS
@@ -70,7 +71,7 @@ export function LearningModules() {
                             value=""
                             id="flexCheck"
                             className="me-3"
-                            disabled="true"
+                            disabled={true}
                             style={{ width:"3em", height:"3em" }}
                         />
                         AWS basics
