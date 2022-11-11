@@ -1,6 +1,6 @@
 import { Home } from './modules/home';
 import { NavBar } from './components/navbar';
-// import { ProjectHelp } from './modules/projectHelp';
+import { ProjectHelp } from './modules/projectHelp';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter,  Route, Routes } from 'react-router-dom';
@@ -16,7 +16,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home showModal={isModalDisplayed} />}> </Route>
         {/* <Route path='/portal/Home' element = {<Home/>}></Route>; */}
-        {/* <Route path='/portal/projectHelp' element = {<ProjectHelp/>}></Route>; */}
+        <Route path='/portal/projectHelp' element = {<ProjectHelp/>}></Route>;
       </Routes>
       </div>
     </BrowserRouter>

@@ -5,32 +5,29 @@ import Col from 'react-bootstrap/Col';
 import { news } from '../assets/news';
 import * as Icon from 'react-bootstrap-icons';
 import React from 'react';
+import "../style/card.css"
 
-export default function NewsCard() {
+export default function NewsCard(props) {
+    console.log("==News==", props.data)
   return (
     <Container style={{ maxHeight: '650px',overflow:'auto' }}>
         <ListGroup variant='flush'>
-            {news.map(item => (
+            {props.data.map(item => (
                 <ListGroup.Item key={item.id}>
-                    <Row>
-                        <Col sm={4}>
-                            <img src={item.imageSrc} className="img-reponsive img-thumbnail" alt="..." />
-                        </Col>
-                        <Col sm={8}>
-                            <Row>{item.discription}</Row>
-                            <Row className='pt-4'>
-                                <Col sm={1}>
-                                    <Icon.HandThumbsUp size={25} />
-                                </Col>
-                                <Col sm={1}>
-                                    <Icon.ChatLeft size={25} />
-                                </Col>
-                                <Col sm={1}>
-                                    <Icon.Share size={25} />
-                                </Col>
-                            </Row>
-                        </Col>
-                    </Row>
+                    <div className='d-flex flex-row '>
+                            <div className='img-wh'>
+                                <img src={item.imageSrc} className="img-reponsive img-thumbnail" alt="..." />
+                            </div>
+                            <div className='d-flex flex-column px-4'>
+                            {item.title?<div className='text-start fs-4'>{item.title}</div>:<></>}
+                                <div className='text-start'>{item.description}</div>
+                                <div className='d-flex flex-row'>
+                                     <Icon.HandThumbsUp className='mx-2' size={25} />
+                                     <Icon.ChatLeft className='mx-2' size={25} />
+                                     <Icon.Share className='mx-2' size={25} />
+                                </div>
+                            </div>
+                    </div>
                 </ListGroup.Item>
             ))}
         </ListGroup>

@@ -1,0 +1,12 @@
+.searchBar{
+    z-index: 1;
+    position: absolute;
+    left: 60%;
+    top: 50%;
+    transform: translate(-60%,50%);
+    height:50px ;
+    width: 60% !important;
+    border: 2px solid;
+    border-radius: 20px;
+    overflow: hidden;
+  }

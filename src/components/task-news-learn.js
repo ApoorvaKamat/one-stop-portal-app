@@ -7,6 +7,7 @@ import NewsCard from "./card"
 import { Calendar } from "./calendar";
 import { LearningModules } from "./learning-modules";
 import { Conversations } from "./conversations";
+import { news } from "../assets/news";
 
 export function TaskNewsLearn() {
   return (
@@ -31,7 +32,7 @@ export function TaskNewsLearn() {
                         <Col className="bg-subhead"><h4 className="pt-2 text-white">NEWS AND SOCIAL MEDIA</h4></Col>
                     </Row>
                     <Row>
-                        <NewsCard></NewsCard>
+                        <NewsCard data={news}></NewsCard>
                     </Row>
                 </Col>
                 <Col sm={3}id="learning" className="border-end border-dark">
