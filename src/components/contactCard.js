@@ -4,6 +4,9 @@ import Card from 'react-bootstrap/Card';
 import { contacts } from "../assets/contacts";
 import * as Icon from 'react-bootstrap-icons';
 import "../style/card.css"
+import { ChatModal } from "./chat-modal";
+import { MessageInputSvg } from "./MessageInputSvg";
+
 
 export function ContactCard(props) {
    // const [contactData, setContactData] = useState([]);
@@ -36,7 +39,11 @@ export function ContactCard(props) {
                     <img src={c.imageSrc} className="contact-width" width={170} height={170} alt="..."></img>
                     <div>{c.name}</div>
                     <div className="d-flex flex-row justify-content-center">
-                        <Icon.Chat className="mx-2" size={20}></Icon.Chat>
+                        <MessageInputSvg 
+                            name = {c.name}
+                            msg = "message"
+                        />
+                        
                         <Icon.Telephone className="mx-2" size={20}></Icon.Telephone>
                         <a href={c.linkedin} target='_blank' rel="noreferrer">
                             <Icon.Linkedin className="mx-2" size={20} color={"blue"}></Icon.Linkedin>
