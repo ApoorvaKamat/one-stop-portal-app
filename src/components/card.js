@@ -10,7 +10,7 @@ import "../style/card.css"
 export default function NewsCard(props) {
     console.log("==News==", props.data)
   return (
-    <Container style={{ maxHeight: '650px',overflow:'auto' }}>
+    <div style={{ maxHeight: '650px',overflow:'auto' }}>
         <ListGroup variant='flush'>
             {props.data.map(item => (
                 <ListGroup.Item key={item.id}>
@@ -31,6 +31,6 @@ export default function NewsCard(props) {
                 </ListGroup.Item>
             ))}
         </ListGroup>
-    </Container>
+    </div>
   );
 };

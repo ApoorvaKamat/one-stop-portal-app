@@ -9,6 +9,7 @@ export function ProjectHelp() {
     const [masterData, setMasterData] = useState(faq);
     const [filterData, setFilterData] = useState([]);
     const [searchValue, setSearchValue] = useState('');
+    let contactList = [];
 
     const onSearch = (e) => {
         let value = e.target.value
@@ -24,9 +25,26 @@ export function ProjectHelp() {
         console.log('value',value)
         console.log('is Searched ', isFetched);
     }
+    const getContactList = () => {
+        let id = [];
+        let cList = [];
+        console.log(filterData);
+        filterData.forEach(data=>{
+            data.contacts.forEach(contact=>{
+                if(id.indexOf(contact.id)<=-1){
+                    id.push(contact.id);
+                    cList.push(contact);
+                }
+            })
+        });
+        console.log("======contatcList======",contactList);
+        return cList;
+       
+    }
     const filterList = (value)=>{
-        let filteredValues= masterData.filter(o =>
-            Object.keys(o).some(k => `${o[k]}`.toLowerCase().includes(value.toLowerCase())));
+        let filteredValues= masterData.filter(o => 
+            Object.keys(o).some(k => `${o[k]}`.toLowerCase().includes(value.toLowerCase()))
+            );
         setFilterData(filteredValues)
       }
     return (
@@ -36,7 +54,7 @@ export function ProjectHelp() {
             </div>
             {(isFetched && filterData.length<=0)?<div>No Matches found</div>:<></>}
             <div className="mt-4">
-                <Faq fetched={isFetched && filterData.length>0} displayData={(isFetched && filterData.length>0)?filterData:masterData}/>
+                <Faq fetched={isFetched && filterData.length>0} displayData={(isFetched && filterData.length>0)?filterData:masterData} contactList={getContactList()}/>
             </div>
         </div>
     )
