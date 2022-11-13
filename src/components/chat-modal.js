@@ -8,7 +8,6 @@ import {
     Message,
     MessageInput,
 } from "@chatscope/chat-ui-kit-react";
-import styles from "@chatscope/chat-ui-kit-styles/dist/default/styles.min.css";
 
 export function ChatModal(props) {
     const [newmsg, setnewmsg] = useState([]);
