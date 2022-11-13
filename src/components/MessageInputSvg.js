@@ -6,12 +6,9 @@ import {
     ChatContainer,
     MessageList,
     Message,
-    MessageInput,
-    MessageGroup,
-    MessageListContent,
-    MessageSeparator,
 } from "@chatscope/chat-ui-kit-react";
 import * as Icon from 'react-bootstrap-icons';
+import styles from "@chatscope/chat-ui-kit-styles/dist/default/styles.min.css";
 import {nanoid} from "nanoid";
 import {
   BasicStorage,
