@@ -1,10 +1,10 @@
 import React from "react";
-import {meetingscheuler} from "../components/meeting-scheduler";
+import {MeetingScheduler} from "../components/meeting-scheduler";
 
 export function MeetingSchedule(props) {
     return (
-        <>
-        <meetingscheuler />
-        </>
+        <div className="mt-4">
+            <MeetingScheduler />
+        </div>
     )
 }

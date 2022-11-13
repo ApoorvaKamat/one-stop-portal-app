@@ -18,7 +18,7 @@ function App() {
         <Route path='/' element={<Home showModal={isModalDisplayed} />}> </Route>
         {/* <Route path='/portal/Home' element = {<Home/>}></Route>; */}
         <Route path='/portal/projectHelp' element = {<ProjectHelp/>}></Route>;
-        <Route path='/portal/meetingschedule' element = {<MeetingSchedule/>}></Route>;
+        <Route path='/portal/scheduleMeeting' element = {<MeetingSchedule/>}></Route>;
       </Routes>
       </div>
     </BrowserRouter>

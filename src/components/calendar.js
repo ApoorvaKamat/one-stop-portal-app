@@ -22,9 +22,10 @@ export function Calendar() {
           center: "title",
           right: "dayGridMonth,timeGridWeek,timeGridDay"
         }}
-        themeSystem="Simplex"
+        themeSystem="United"
         plugins={[dayGridPlugin]}
         events={events}
+        selectable = {true}
       />
     </>
   );

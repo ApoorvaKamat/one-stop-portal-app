@@ -9,8 +9,6 @@ import {
     MessageInput,
 } from "@chatscope/chat-ui-kit-react";
 import * as Icon from 'react-bootstrap-icons';
-import styles from "@chatscope/chat-ui-kit-styles/dist/default/styles.min.css";
-import { useChat, ChatMessage, MessageStatus, MessageContentType, } from '@chatscope/use-chat';
 import {nanoid} from "nanoid";
 import {
   BasicStorage,
