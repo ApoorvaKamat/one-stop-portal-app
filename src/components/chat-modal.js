@@ -11,10 +11,14 @@ import {
 import styles from "@chatscope/chat-ui-kit-styles/dist/default/styles.min.css";
 
 export function ChatModal(props) {
+    const [newmsg, setnewmsg] = useState([]);
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
+    const onmsgsend = () => setnewmsg([...newmsg, document.getElementById("id").value]); 
+    
 
     return (
         <>
@@ -52,13 +56,33 @@ export function ChatModal(props) {
                                         direction: "incoming"
 
                                     }}
-                                />
+                                /> 
+                                {
+                                     newmsg.map(i => {
+                                        return <Message
+                                        model={{
+                                            message: i,
+                                            sentTime: "just now",
+                                            sender: "Joe",
+                                            direction: "outgoing"
+    
+                                        }}
+                                    /> 
+                                    })
+
+                                }
                             </MessageList>
-                            <MessageInput
-                                placeholder="Type message here"
-                            />
+                            
                         </ChatContainer>
                     </MainContainer>
+                    <div style={{ width: "100%" }}>
+                    <input
+                                id='id'
+                                placeholder="Type message here"
+                            />
+                           <button onClick={onmsgsend}>Send</button>
+                    </div>
+                    
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>
