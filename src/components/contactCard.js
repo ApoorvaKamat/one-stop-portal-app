@@ -21,7 +21,7 @@ export function ContactCard(props) {
             <div className="d-flex flex-row justify-content-center">
                 <MessageInputSvg 
                     name = {c.name}
-                    msg = "message"
+                    msg = "Welcome to the chat with expert. Please send your first message here."
                 />
                 
                 <Icon.Telephone className="mx-2" size={20}></Icon.Telephone>
