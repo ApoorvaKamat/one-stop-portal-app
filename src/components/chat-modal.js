@@ -75,19 +75,17 @@ export function ChatModal(props) {
                             
                         </ChatContainer>
                     </MainContainer>
-                    <div style={{ width: "100%" }}>
-                    <input
-                                id='id'
-                                placeholder="Type message here"
-                            />
-                           <button onClick={onmsgsend}>Send</button>
-                    </div>
+                   
                     
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClose}>
-                        Close
-                    </Button>
+                <div style={{ width: "100%" }}>
+                    <input style={{ width: "80%" }}
+                                id='id'
+                                placeholder="Type message here"
+                            />
+                           <button onClick={onmsgsend} style={{ width: "20%" }}>Send</button>
+                    </div>
                 </Modal.Footer>
             </Modal>
         </>

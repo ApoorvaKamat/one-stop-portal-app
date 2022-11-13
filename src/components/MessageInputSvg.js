@@ -10,25 +10,13 @@ import {
 } from "@chatscope/chat-ui-kit-react";
 import * as Icon from 'react-bootstrap-icons';
 import styles from "@chatscope/chat-ui-kit-styles/dist/default/styles.min.css";
-import { useChat, ChatMessage, MessageStatus, MessageContentType, } from '@chatscope/use-chat';
-import {nanoid} from "nanoid";
 import {
   BasicStorage,
   ChatProvider,
   ExampleChatService,
   AutoDraft
 } from "@chatscope/use-chat";
-import { Chat } from './chat';
 
-const messageIdGenerator = () => nanoid();
-const groupIdGenerator = () => nanoid();
-
-// Create serviceFactory
-const serviceFactory = (storage, updateState) => {
-  return new ExampleChatService(storage, updateState);
-};
-
-const chatStorage = new BasicStorage({groupIdGenerator, messageIdGenerator});
 
 export function MessageInputSvg(props) {
     const [newmsg, setnewmsg] = useState([]);
@@ -79,20 +67,18 @@ export function MessageInputSvg(props) {
                             
                         </ChatContainer>
                     </MainContainer>
-                    <div style={{ width: "100%" }}>
-                    <input
-                                id='id'
-                                placeholder="Type message here"
-                            />
-                           <button onClick={onmsgsend}>Send</button>
-                    </div>
+                    
                     
 
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClose}>
-                        Close
-                    </Button>
+                <div style={{ width: "100%" }}>
+                    <input style={{ width: "80%" }}
+                                id='id'
+                                placeholder="Type message here"
+                            />
+                           <button onClick={onmsgsend} style={{ width: "20%" }}>Send</button>
+                    </div>
                 </Modal.Footer>
             </Modal>
         </>
