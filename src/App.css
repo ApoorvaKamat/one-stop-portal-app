@@ -27,6 +27,14 @@
 .App-link {
   color: #61dafb;
 }
+.min-width-30{
+  min-width: 25%;
+  max-width: 25%;
+  
+}
+.min-width-15{
+  min-width: 15%;
+}
 
 @keyframes App-logo-spin {
   from {

@@ -18,7 +18,6 @@ import {
   ExampleChatService,
   AutoDraft
 } from "@chatscope/use-chat";
-import { Chat } from './chat';
 
 const messageIdGenerator = () => nanoid();
 const groupIdGenerator = () => nanoid();
@@ -44,7 +43,9 @@ export function MessageInputSvg(props) {
         <>
             <Icon.Chat className="mx-2" size={20} onClick={handleShow}></Icon.Chat>
 
-            <Modal show={show} onHide={handleClose}>
+            <Modal show={show} onHide={handleClose} centered size='lg'
+        aria-labelledby="example-custom-modal-styling-title"
+>
                 <Modal.Header closeButton>
                     <Modal.Title>{props.name}</Modal.Title>
                 </Modal.Header>

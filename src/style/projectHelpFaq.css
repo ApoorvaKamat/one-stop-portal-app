@@ -1,12 +1,8 @@
-.mw-60{
-    width: 50%;
-    max-width: 50%;
-    min-width: 50%;
-}
-.mw-40{
-    width: 25%;
+.min-width-30{
+    min-width: 25%;
     max-width: 25%;
+    
 }
 .min-width-15{
-    min-width: 15%
+    min-width: 15%;
 }
