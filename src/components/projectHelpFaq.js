@@ -1,13 +1,5 @@
 import React, {useState} from "react";
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import { TaskTable } from "./task-table";
 import NewsCard from "./card"
-import { Calendar } from "./calendar";
-import { LearningModules } from "./learning-modules";
-import { Conversations } from "./conversations";
-import { faq } from "../assets/faq";
 import { ContactCard } from "./contactCard";
 import "../style/projectHelpFaq.css";
 
