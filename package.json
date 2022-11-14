@@ -2,6 +2,11 @@
   "name": "one-stop-portal-app",
   "version": "0.1.0",
   "private": true,
+  "engines" : {
+    "npm" : ">=7.0.0 <9.0.0",
+    "node" : ">=16.0.0 <17.0.0"
+  },
+
   "dependencies": {
     "@chatscope/chat-ui-kit-react": "^1.9.7",
     "@chatscope/chat-ui-kit-styles": "^1.4.0",
