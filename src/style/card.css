@@ -14,3 +14,6 @@
     border: 1px solid var(--bs-border-color);
     border-radius: 0.375rem;
 }
+.w-30 {
+    width: 30%;
+}

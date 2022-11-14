@@ -46,16 +46,16 @@ export function MessageInputSvg(props) {
     }
 
     const onmsgsend = () => {
-        let value = document.getElementById("id").value;
+        let input = document.getElementById("id");
         let index = indexCounter;
-        if(value !== ""){
-            setnewmsg([...newmsg, value,msgArray[index]]);
+        if(input.value !== ""){
+            setnewmsg([...newmsg, input.value,msgArray[index]]);
             index += 1;
-            setIndexCounter(index);}
-
-            else{
-                setIsHover('Red');
-            }
+            setIndexCounter(index);
+            input.value='';}
+        else{
+            setIsHover('Red');
+        }
         }
         
 
