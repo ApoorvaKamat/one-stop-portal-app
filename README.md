@@ -32,4 +32,23 @@ The page will reload when you make changes.\
 Go to http://localhost:3000 or website. On the left you can see the tasks.\
 You can even click on them to visit the JIRA link to the project.
 
+![Screenshot](public/screenshots/tasks.png)
 
+## Task 2: Check the discussions for a particular topic you are stuck on
+Go to http://localhost:3000/portal/projectHelp or website. You can search for your query.\
+Please go through the discussions that other users have already posted about the topic.
+![Screenshot](public/screenshots/readdiscussions.png)
+
+
+## Task 3: Scheduling meeting with an expert
+Go to http://localhost:3000/portal/projectHelp or website. Chat with any expert you find suitable.\
+![Screenshot](public/screenshots/chat.png)
+
+If they are available, go ahead and schedule a meeting with them.
+![Screenshot](public/screenshots/meetingscheduled.png)
+
+### End notes
+This is demo project for representation purposes only.
+Please enjoy the application!
+
+**Made with ❤️ by Team Graphica**
