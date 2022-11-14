@@ -1,0 +1,19 @@
+.img-wh {
+   max-width: 25%;
+   height: 80%;
+   min-height: 80%;
+   max-height: 80%;
+}
+.txt-wh {
+    max-width: 50%;
+    min-width: 50%;
+}
+.contact-width{
+    padding: 0.25rem;
+    background-color: #fff;
+    border: 1px solid var(--bs-border-color);
+    border-radius: 0.375rem;
+}
+.w-30 {
+    width: 30%;
+}
