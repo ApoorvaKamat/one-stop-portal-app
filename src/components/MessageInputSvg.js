@@ -16,6 +16,8 @@ import {
   ExampleChatService,
   AutoDraft
 } from "@chatscope/use-chat";
+import { MeetingSchedule } from '../modules/task-schedule';
+import { MeetingScheduler } from './meeting-scheduler';
 
 const messageIdGenerator = () => nanoid();
 const groupIdGenerator = () => nanoid();
@@ -30,21 +32,23 @@ const chatStorage = new BasicStorage({groupIdGenerator, messageIdGenerator});
 export function MessageInputSvg(props) {
     const msgArray = ['Hi','Oh I see, can we discuss this over a call', 'Thankyou','Bye']
     const [newmsg, setnewmsg] = useState([]);
-    const [show, setShow] = useState(false);
     const [isHover, setIsHover]= useState('');
-    const [returnMsg, setreturnMsg]= useState('');
+    const [showSchedular, setShowSchedular]= useState(false);
     const [indexCounter, setIndexCounter]= useState(0);
 
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
     const handlemouseenter = () => setIsHover('Green');
     const handleMouseLeave = () => setIsHover('Blue');
+    const handleMeetingSchedule = () => {
+        setShowSchedular(true);
+    }
+    const handleBackClick = () => {
+        setShowSchedular(false);
+    }
 
     const onmsgsend = () => {
         let value = document.getElementById("id").value;
         let index = indexCounter;
         if(value !== ""){
-            setreturnMsg(msgArray[index]);
             setnewmsg([...newmsg, value,msgArray[index]]);
             index += 1;
             setIndexCounter(index);}
@@ -57,17 +61,34 @@ export function MessageInputSvg(props) {
 
     return (
         <>
-            <Icon.Chat className="mx-2" size={20} onClick={handleShow}></Icon.Chat>
-
-            <Modal show={show} onHide={handleClose} centered size='lg'
+            <Modal show={props.show} onHide={props.hide} centered size='lg'
         aria-labelledby="example-custom-modal-styling-title"
 >
                 <Modal.Header closeButton>
-                    <Modal.Title>{props.name}</Modal.Title>
+                    <Modal.Title>
+                        <div className='d-flex flex-row justify-content-evenly'>
+                            <img src={props.image} className="contact-width" width={150} height={150} alt="..."></img>
+                            <div className='d-flex flex-column mx-3'>
+                                <div>{props.name}</div>
+                                {!showSchedular?<Button variant='primary' className='d-flex flex-row justify-content-between' onClick={handleMeetingSchedule}>
+                                   <Icon.CalendarPlus size={20}></Icon.CalendarPlus>
+                                   <div>New Meeting</div>
+                                </Button>
+                                :<Button variant='primary' className='d-flex flex-row justify-content-between' onClick={handleBackClick}>
+                                   <Icon.ArrowLeft size={20}></Icon.ArrowLeft>
+                                   <div>Back</div>
+                                </Button>}
+                                {/* <div className='fs-6 fw-light'>Schedule Meeting</div> */}
+                            </div>
+                        </div>
+                    </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
+                {showSchedular
+                ?<MeetingScheduler />
+                :<>
                 <MainContainer>
-                        <ChatContainer style={{minHeight: "25rem",}}>
+                <ChatContainer style={{minHeight: "25rem",}}>
                             <MessageList>
                                 <Message
                                     model={{
@@ -114,11 +135,13 @@ export function MessageInputSvg(props) {
                             Send
                     </Icon.Send >
                     </div>
+                </>
+                }
                     
 
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClose}>
+                    <Button variant="secondary" onClick={props.hide}>
                         Close
                     </Button>
                 </Modal.Footer>

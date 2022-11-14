@@ -5,12 +5,6 @@ import "../style/projectHelpFaq.css";
 
 
 export function Faq(props) {
-  const [contactData, setContactData] = useState([]);
-  let index = 0;
-  const getContactData = () => {
-    return props.displayData
-  }
-  console.log("isFethched",props.displayData);
   return (
     <div className={`d-flex flex-row vh-100`}>
         <div className={`d-flex flex-column border-end border-dark w-25 ${props.fetched?"min-width-15":""}`}>
