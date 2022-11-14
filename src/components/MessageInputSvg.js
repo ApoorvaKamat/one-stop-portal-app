@@ -30,7 +30,7 @@ const serviceFactory = (storage, updateState) => {
 const chatStorage = new BasicStorage({groupIdGenerator, messageIdGenerator});
 
 export function MessageInputSvg(props) {
-    const msgArray = ['Hi','Oh I see, can we discuss this over a call', 'Thankyou','Bye']
+    const msgArray = ['Hi','Oh I see, can we discuss this over a call', 'Thank you','Bye']
     const [newmsg, setnewmsg] = useState([]);
     const [isHover, setIsHover]= useState('');
     const [showSchedular, setShowSchedular]= useState(false);
