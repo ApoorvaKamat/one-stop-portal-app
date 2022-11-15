@@ -2,6 +2,8 @@
 
 This project aims to solve daily life problems in the corporate world by providing them a one stop solution for everything.
 
+View the demo Video at: https://youtu.be/59-LhhL0ekc
+
 ## Developed By
 Apoorva Anil Kamat \
 Yash Shyamsunder Pratapwar \
