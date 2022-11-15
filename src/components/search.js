@@ -7,7 +7,7 @@ export const SearchBar = ({onSearch}) => {
     return(
     <div className={`input-group searchBar`} onChange={e => onSearch(e)}>
         <Button className='bg-subhead'><Icon.Search></Icon.Search></Button>
-        <input type="text" className="p-2 form-control" placeholder="Search..."/>
+        <input type="text" className="p-2 form-control" placeholder="Search....."/>
      </div>
     );
 }

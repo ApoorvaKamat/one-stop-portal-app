@@ -1,6 +1,5 @@
 .searchBar{
     z-index: 1;
-    position: absolute;
     left: 60%;
     top: 50%;
     transform: translate(-60%,50%);
