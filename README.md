@@ -3,14 +3,14 @@
 This project aims to solve daily life problems in the corporate world by providing them a one stop solution for everything.
 
 ## Developed By
-Apoorva Kamat \
+Apoorva Anil Kamat \
 Yash Shyamsunder Pratapwar \
 Anusri Yarlagadda\
 Sajal Suhane
 
 ## Steps to run the project
 
-0. Directly visit the deployed version of website at: 
+0. Directly visit the deployed version of website at: https://one-stop-portal-app.vercel.app/
 
 ### Prerequisites 
 * npm should be installed
@@ -29,19 +29,19 @@ The page will reload when you make changes.\
 
 ### Tasks
 ## Task 1: Check daily tasks
-Go to http://localhost:3000 or website. On the left you can see the tasks.\
+Go to http://localhost:3000 or [website](https://one-stop-portal-app.vercel.app/). On the left you can see the tasks.\
 You can even click on them to visit the JIRA link to the project.
 
 ![Screenshot](public/screenshots/tasks.png)
 
 ## Task 2: Check the discussions for a particular topic you are stuck on
-Go to http://localhost:3000/portal/projectHelp or website. You can search for your query.\
+Go to http://localhost:3000/portal/projectHelp or [website](https://one-stop-portal-app.vercel.app/portal/projectHelp). You can search for your query.\
 Please go through the discussions that other users have already posted about the topic.
 ![Screenshot](public/screenshots/readdiscussions.png)
 
 
 ## Task 3: Scheduling meeting with an expert
-Go to http://localhost:3000/portal/projectHelp or website. Chat with any expert you find suitable.\
+Go to http://localhost:3000/portal/projectHelp or [website](https://one-stop-portal-app.vercel.app/portal/projectHelp). Chat with any expert you find suitable.\
 ![Screenshot](public/screenshots/chat.png)
 
 If they are available, go ahead and schedule a meeting with them.
