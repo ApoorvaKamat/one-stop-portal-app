@@ -2,6 +2,7 @@ import { Home } from './modules/home';
 import { NavBar } from './components/navbar';
 import { ProjectHelp } from './modules/projectHelp';
 import {MeetingSchedule} from './modules/task-schedule'
+import {HelpDocModule} from './modules/help-doc'
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter,  Route, Routes } from 'react-router-dom';
@@ -19,6 +20,7 @@ function App() {
         {/* <Route path='/portal/Home' element = {<Home/>}></Route>; */}
         <Route path='/portal/projectHelp' element = {<ProjectHelp/>}></Route>;
         <Route path='/portal/scheduleMeeting' element = {<MeetingSchedule/>}></Route>;
+        <Route path='/portal/helpanddocumentation' element = {<HelpDocModule/>}></Route>;
       </Routes>
       </div>
     </BrowserRouter>

@@ -14,7 +14,7 @@ export function NavBar(props) {
         <Navbar.Collapse id="esponsive-navbar-nav">
           <Nav fill className="w-100">
             <Nav.Item>
-                <Nav.Link href="#support">Support</Nav.Link>
+                <Nav.Link href="/portal/helpanddocumentation">Support</Nav.Link>
             </Nav.Item>
             <Nav.Item>
                 <Nav.Link href="#hrConnect">HR-Connect</Nav.Link>
