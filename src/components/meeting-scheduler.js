@@ -14,12 +14,31 @@ export function MeetingScheduler(props) {
     const [meetingtime, setMeetingTime] = useState('');
     const [date, setDate] = useState(new Date());
     const [isTimeSeleted, setIsTimeSelected] = useState(false);
+    const [isDateSeleted, setIsDateSelected] = useState(false);
+    var now = new Date();
+    now.setHours(0,0,0,0);
 
     const handleSetMeeting = (time) => {
         setMeetingTime(time);
     }
     const handleSubmit = () => {
-        setIsTimeSelected(meetingtime!=='')};
+        setIsTimeSelected(meetingtime!=='')
+        if (date < now){
+            alert("Please select valid date and time!")
+        } else {
+            setIsDateSelected(true)
+            alert("Selected date is "+ date.toDateString() + " and time "+ meetingtime)
+        }
+        
+        // if(isDateSeleted && isTimeSeleted){
+        //     alert("Selected date is "+ + format(date,'dd/11/yyyy') + " and time "+ meetingtime)
+        // } 
+        // else
+        // {
+        //     alert("Please select valid date and time!")
+        // }
+
+    };
   return (
     <>
         <Row>
@@ -42,7 +61,10 @@ export function MeetingScheduler(props) {
                         ))}
                         </Dropdown.Menu>
                 </Dropdown>
-                {(isTimeSeleted) && <div className="mt-3">{"Meeting Scheduled at " + meetingtime + " on " + format(date,'dd/11/yyyy')}</div>} 
+                {(isTimeSeleted) && (isDateSeleted) && <div className="mt-3">{
+                "Meeting Scheduled at " + meetingtime + " on " + format(date,'dd/11/yyyy')
+                }
+                </div>} 
             </Col>
         <Row>
             <Button className="btn btn-success w-25 m-2" onClick={handleSubmit}>Submit Meeting Request</Button>

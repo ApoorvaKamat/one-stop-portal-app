@@ -27,11 +27,11 @@ export default function NewsCard(props) {
                             <div className='d-flex flex-column px-4'>
                             {item.title && <div className='text-start fs-4'>{item.title}</div>}
                                 <div className='text-start'>{item.description}</div>
-                                <div className='d-flex flex-row mt-2'>
+                                {/* <div className='d-flex flex-row mt-2'>
                                      <Icon.HandThumbsUp className='mx-2' size={25} />
                                      <Icon.ChatLeft className='mx-2' size={25} />
                                      <Icon.Share className='mx-2' size={25} />
-                                </div>
+                                </div> */}
                                 {item.title &&<div className='w-30 mt-2'>
                                  <Button variant='primary' className='d-flex flex-row justify-content-evenly' onClick={()=>handleClick(item)}>
                                         <Icon.CardText size={25} className='mr-1'></Icon.CardText>
@@ -48,11 +48,11 @@ export default function NewsCard(props) {
                     {readMoreText.title && <div className='text-start fs-4'>{readMoreText.title}</div>}
                         <div className='text-start'>{readMoreText.description}</div>
                         <div className='text-start'>{readMoreText.readmore}</div>
-                        <div className='d-flex flex-row mt-2'>
+                        {/* <div className='d-flex flex-row mt-2'>
                              <Icon.HandThumbsUp className='mx-2' size={25} />
                              <Icon.ChatLeft className='mx-2' size={25} />
                              <Icon.Share className='mx-2' size={25} />
-                        </div>
+                        </div> */}
                         {readMoreText.title && <div className='w-30 mt-2'>
                         <Button variant='primary' className='d-flex flex-row justify-content-evenly' onClick={()=>setShowAllList(true)}>
                                 <Icon.CardText size={25} className='mr-1'></Icon.CardText>
