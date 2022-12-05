@@ -23,14 +23,23 @@ export function UpdateCarousel() {
 
   return (
     <>
-        <Container fluid className="bg-subhead">
+        {/* <Container fluid className="bg-subhead">
             <Row>
                 <Col><h4 className="pt-2 text-white">UPDATES</h4></Col>
             </Row>
         </Container>
        <div className="position-relative overflow-hidden">
           <Carousel items={items} itemWidth={410} />
-       </div>
+       </div> */}
+
+       <div className={`d-flex flex-row`}>
+        <div className={`d-flex flex-column border-end border-dark w-100`}>
+            <h4 className="bg-subhead py-2 text-white m-0 mh-10">UPDATES</h4>
+            <div className="position-relative overflow-hidden">
+              <Carousel items={items} itemWidth={410} />
+            </div>
+        </div>
+    </div>
         
     </>
   );

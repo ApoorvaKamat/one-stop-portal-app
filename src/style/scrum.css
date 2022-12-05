@@ -1,0 +1,25 @@
+.react-kanban-board {
+    justify-content: space-evenly;
+    overflow: auto!important;
+}
+.react-kanban-column{
+    margin: 20px;
+    background-color: #343a40!important;
+    width: 20rem;
+}
+.react-kanban-column-header,.react-kanban-card-adder-button{
+    color: white;
+}
+.react-kanban-card {
+    min-width: 18rem;
+    max-width: 18rem;
+    background-color: ivory;
+}
+
+#column-draggable-1{
+    color: white;
+}
+
+.max-height-50vh{
+    height: 50vh;
+}

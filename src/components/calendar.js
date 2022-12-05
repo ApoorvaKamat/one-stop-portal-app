@@ -1,21 +1,21 @@
 import React, {useState} from "react";
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import FullCalendar from "@fullcalendar/react";
-import dayGridPlugin from "@fullcalendar/daygrid";
-// import timeGridPlugin from "@fullcalendar/timegrid";
+// import Container from 'react-bootstrap/Container';
+// import Row from 'react-bootstrap/Row';
+// import Col from 'react-bootstrap/Col';
+// import FullCalendar from "@fullcalendar/react";
+// import dayGridPlugin from "@fullcalendar/daygrid";
+// // import timeGridPlugin from "@fullcalendar/timegrid";
 
-import "@fullcalendar/core/main.css";
-import "@fullcalendar/daygrid/main.css";
-import "@fullcalendar/timegrid/main.css";
+// import "@fullcalendar/core/main.css";
+// import "@fullcalendar/daygrid/main.css";
+// import "@fullcalendar/timegrid/main.css";
 
-import events from "../assets/events";
+// import events from "../assets/events";
 
 export function Calendar() {
   return (
     <>
-        <FullCalendar
+        {/* <FullCalendar
         defaultView="dayGridMonth"
         header={{
           left: "prev,next",
@@ -25,7 +25,7 @@ export function Calendar() {
         themeSystem="United"
         plugins={[dayGridPlugin]}
         events={events}
-        selectable = {true}
+        selectable = {true} */}
       />
     </>
   );

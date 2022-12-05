@@ -9,24 +9,15 @@ export function NavBar(props) {
  
   return (
     <Navbar  collapseOnSelect bg="dark" expand="sm" variant="dark">
-      <Navbar.Brand href='/'onClick={()=> props.displayhelpModal(false)} className="px-3">One Stop Graphica Portal</Navbar.Brand>
+      <Navbar.Brand href='/'onClick={()=> props.displayhelpModal(false)} className={window.location.pathname == "/" ? 'active px-3' : 'px-3'}>One Stop Graphica Portal</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="esponsive-navbar-nav">
           <Nav fill className="w-100">
             <Nav.Item>
-                <Nav.Link href="/portal/helpanddocumentation">Support</Nav.Link>
+                <Nav.Link href="/portal/projectHelp" className={window.location.pathname == "/portal/projectHelp" ? 'active' : ''}>Project Help</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-                <Nav.Link href="#hrConnect">HR-Connect</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-                <Nav.Link href="/portal/projectHelp">Project Help</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-                <Nav.Link href="#knowYourCompnay">Know Your Company</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-                <Nav.Link href="#network">Network</Nav.Link>
+                <Nav.Link href="/portal/helpanddocumentation" className={window.location.pathname == "/portal/helpanddocumentation" ? 'active' : ''}>Support</Nav.Link>
             </Nav.Item>
             <NavDropdown className="text-white" title="Hi, Jhon Doe" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Profile</NavDropdown.Item>
