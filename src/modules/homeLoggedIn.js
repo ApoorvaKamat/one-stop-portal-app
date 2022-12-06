@@ -9,22 +9,18 @@ import LoginPage from "../components/login";
 import { Button } from "react-bootstrap";
 import { Context } from "../store";
 
-export function Home() {
+export function HomeLoggedIn() {
     const [modalShow, setModalShow] = React.useState(true);
     const [state,dispatch] = useContext(Context);
     return (
         <>
         <div className={`d-flex flex-column border-end border-dark w-100 h-100`}>
             <UpdateCarousel />
-            {state.login && <TaskView />}
+            <TaskView />
             {/* <Button onClick={()=>onLogin('abc')}>test</Button> */}
-            {!state.login  && <LoginPage />}
+            {/* <LoginPage /> */}
         </div>
-        
-        {state.showModal &&
-        <UserGuideModal
-        show={modalShow}
-        onHide={() => setModalShow(false)}/>}
+
         </>
     )
 }

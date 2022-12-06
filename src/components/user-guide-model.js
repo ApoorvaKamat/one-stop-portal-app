@@ -26,16 +26,16 @@ export function UserGuideModal(props) {
   >
     <Modal.Body className='bg-dark text-white'>
       <h4>Wondering what to do ?</h4>
-    <div className='d-flex flex-row'>
-    <ShakeSlow
+    <div className='d-flex flex-column'>
+      <h4 className='p-3'>Login with your email id to view your tasks</h4>
+      <ShakeSlow style={{ marginLeft: "40%" }}
       fixed={true}
       fixedStop={false}
       freez={false}>
           <span>
-              <h1>👈</h1>
-          </span>
+                  <h1>👇🏻</h1>
+              </span>
       </ShakeSlow>
-      <h4 className='p-3'>View your tasks</h4>
     </div>
     </Modal.Body>
     <Modal.Footer className='bg-dark text-white'>
@@ -63,8 +63,8 @@ export function UserGuideModal(props) {
           </ShakeSlow>
         </div>
         <div className='d-flex flex-column'>
-          <h4>Stuck at with work?</h4>
-          <h5>Get help with <i>Project Help</i></h5>
+          <h4>Stuck?</h4>
+          <h5>Check our  <i>Support Documentation</i></h5>
         </div>
         </Modal.Body>
         <Modal.Footer className='bg-dark text-white'>

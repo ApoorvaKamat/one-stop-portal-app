@@ -1,0 +1,21 @@
+.card{
+    left: 50%;
+    transform: translate(-50%,0);
+    border-radius: 10rem!important;
+    width: 40rem !important;
+    height: 20rem !important;
+}
+.loginCard{
+    background-color: #563d7c !important;
+    background: linear-gradient(rgba(200,0,0,0.3),transparent);
+    justify-content: space-evenly !important;
+    border-radius: 15px !important;
+}
+
+.card-title,.card-text{
+    color: white;
+}
+
+.text-red{
+    color: red !important;
+}
