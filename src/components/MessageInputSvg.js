@@ -33,7 +33,7 @@ export function MessageInputSvg(props) {
     const msgArray = ['Hi','Oh I see, can we discuss this over a call', 'Thank you','Bye']
     const [newmsg, setnewmsg] = useState([]);
     const [isHover, setIsHover]= useState('');
-    const [showSchedular, setShowSchedular]= useState(false);
+    const [showSchedular, setShowSchedular]= useState(props.showCall);
     const [indexCounter, setIndexCounter]= useState(0);
 
     const handlemouseenter = () => setIsHover('Green');
@@ -57,7 +57,7 @@ export function MessageInputSvg(props) {
             setIsHover('Red');
         }
         }
-        
+            
 
     return (
         <>
@@ -70,13 +70,13 @@ export function MessageInputSvg(props) {
                             <img src={props.image} className="contact-width" width={150} height={150} alt="..."></img>
                             <div className='d-flex flex-column mx-3'>
                                 <div>{props.name}</div>
-                                {!showSchedular?<Button variant='primary' className='d-flex flex-row justify-content-between' onClick={handleMeetingSchedule}>
+                                {(!showSchedular)?<Button variant='primary' className='d-flex flex-row justify-content-between' onClick={handleMeetingSchedule}>
                                    <Icon.CalendarPlus size={20}></Icon.CalendarPlus>
                                    <div>New Meeting</div>
                                 </Button>
                                 :<Button variant='primary' className='d-flex flex-row justify-content-between' onClick={handleBackClick}>
-                                   <Icon.ArrowLeft size={20}></Icon.ArrowLeft>
-                                   <div>Back</div>
+                                   <Icon.Chat size={20}></Icon.Chat>
+                                   <div>Go to Chat</div>
                                 </Button>}
                                 {/* <div className='fs-6 fw-light'>Schedule Meeting</div> */}
                             </div>
@@ -85,7 +85,7 @@ export function MessageInputSvg(props) {
                 </Modal.Header>
                 <Modal.Body>
                 {showSchedular
-                ?<MeetingScheduler />
+                ?<MeetingScheduler name={props.name} />
                 :<>
                 <MainContainer>
                 <ChatContainer style={{minHeight: "25rem",}}>
