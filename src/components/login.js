@@ -34,15 +34,14 @@ const LoginPage = () => {
             //document.getElementById('#emailID').value = '';
             dispatch ({type:'show_guide_Modal',payload:false});
             dispatch ({type:'set_login',payload:false});
+            alert('Incorrect Email id format/User does not exit'+'\n' +'Please contact administrator if you are a new to the organisation')
             e.preventDefault();
-            navigte('/home');
         }
         else if (!pswd){
             setPswdError('Please enter pasword');
             dispatch ({type:'show_guide_Modal',payload:false});
             dispatch ({type:'set_login',payload:false});
             e.preventDefault();
-            navigte('/home');
         }
         else{
             dispatch({type:'update_text',payload: userName});
