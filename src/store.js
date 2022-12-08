@@ -6,6 +6,7 @@ const initialState = {
   showModal: true,
   login:false,
   getExpertName:'',
+  activeNavPage:'',
   isMeetingScheduled:
     {
         'Sajal Suhane':{
@@ -50,6 +51,8 @@ export const Store = ({ children }) => {
             return {...state,login:action.payload}
           case 'set_expert_name':
             return {...state,getExpertName:action.payload}
+          case 'set_active_Nav_page' :
+            return {...state,activeNavPage:action.payload}
           case 'set_meeting_schedule':
             return {...state,isMeetingScheduled:action.payload};
           default:

@@ -5,7 +5,6 @@ import { Context } from "../store.js";
 
 export function MeetingScheduler(props) {
   const [state, dispatch] = useContext(Context);
-
   // this generates basic available timeslots for the next 6 days
   const availableTimeslots = [0, 1, 2, 3, 4, 5].map((id) => {
     return {
@@ -68,6 +67,7 @@ export function MeetingScheduler(props) {
         </>
       ) : (
         <>
+        <div className="fs-5 text fst-italic fw-bold text-danger text-center">Please select Date and Time from below to schedule meeting</div>
           <ScheduleMeeting
             borderRadius={10}
             primaryColor="#3f5b85"
@@ -93,7 +93,7 @@ export function MeetingScheduler(props) {
               setIsMeetingSelected(true);
             }}
           >
-            Submit
+            Schedule Meeting
           </Button>
         </>
       )}
