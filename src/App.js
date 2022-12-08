@@ -5,7 +5,7 @@ import {MeetingSchedule} from './modules/task-schedule'
 import {HelpDocModule} from './modules/help-doc'
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter,  Route, Routes } from 'react-router-dom';
+import { BrowserRouter,  Route, Routes,Navigate } from 'react-router-dom';
 import React, { useState } from 'react';
 import { ReactSession } from 'react-client-session';
 import { HomeLoggedIn } from './modules/homeLoggedIn';
@@ -21,7 +21,9 @@ function App() {
       <div className='App'>
       <NavBar />
       <Routes>
+       
         <Route exact path='/home' element={<Home/>}> </Route>
+        <Route exact path='/'  element={<Navigate to='/home'/>} />
         {/* <Route exact path='/portal/Home' element = {<HomeLoggedIn/>}></Route>; */}
         <Route exact path='/portal/projectHelp' element = {<ProjectHelp/>}></Route>;
         <Route exact path='/portal/scheduleMeeting' element = {<MeetingSchedule/>}></Route>;
