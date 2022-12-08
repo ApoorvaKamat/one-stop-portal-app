@@ -12,6 +12,7 @@ import { BorderStyle } from 'react-bootstrap-icons';
  
 const LoginPage = () => {
     const navigte = useNavigate();
+    
     const nameDict = {
                     'sajal@utdallas.edu': 'Sajal',
                     'anusri@utdallas.edu': 'Anusri',

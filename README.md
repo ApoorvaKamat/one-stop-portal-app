@@ -20,7 +20,7 @@ Sajal Suhane
 
 In the project directory, you can run:
 
-1. `npm i` - To install the dependencies
+1. `npm i --force` - To install the dependencies
 
 2. `npm start` - To start the application in development mode
 
@@ -31,13 +31,13 @@ The page will reload when you make changes.\
 
 ### Tasks
 ## Task 1: Check daily tasks
-Go to http://localhost:3000 or [website](https://one-stop-portal-app.vercel.app/). On the left you can see the tasks.\
-You can even click on them to visit the JIRA link to the project.
+Go to http://localhost:3000 or [website](https://one-stop-portal-app.vercel.app/). You can see all your tasks on the landing page once you login with correct credentials.\
+You can even drag them once you have done the changes and it will automatically sync with JIRA.
 
 ![Screenshot](public/screenshots/tasks.png)
 
 ## Task 2: Check the discussions for a particular topic you are stuck on
-Go to http://localhost:3000/portal/projectHelp or [website](https://one-stop-portal-app.vercel.app/portal/projectHelp). You can search for your query.\
+Go to http://localhost:3000/portal/projectHelp or [website](https://one-stop-portal-app.vercel.app/portal/projectHelp). You can search for your query and also filter on them using search and filters.\
 Please go through the discussions that other users have already posted about the topic.
 ![Screenshot](public/screenshots/readdiscussions.png)
 
