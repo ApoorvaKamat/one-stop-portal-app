@@ -54,6 +54,12 @@ export const faq =[
             name: 'Yatharth Singhal',
             linkedin: 'https://www.linkedin.com/in/yatharth-singhal/',
             imageSrc: '/contacts/ta.jpeg',
+        },
+        {
+            id:4,
+            name: 'Apoorva Kamat',
+            linkedin: 'https://www.linkedin.com/in/apoorva-anil-kamat/',
+            imageSrc: '/contacts/apoorva.jpeg',
         }],
     },
     {
@@ -73,6 +79,12 @@ export const faq =[
             name: 'Anusri Yarlagadda',
             linkedin: 'https://www.linkedin.com/in/anusri-yarlagadda/',
             imageSrc: '/contacts/anusri.jpeg',
+        },
+        {
+            id:4,
+            name: 'Apoorva Kamat',
+            linkedin: 'https://www.linkedin.com/in/apoorva-anil-kamat/',
+            imageSrc: '/contacts/apoorva.jpeg',
         }],
     },
     {

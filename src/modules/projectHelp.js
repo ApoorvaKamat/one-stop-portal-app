@@ -26,10 +26,14 @@ export function ProjectHelp() {
         console.log('is Searched ', isFetched);
     }
     const getContactList = () => {
+        let data  = masterData;
+        if(isFetched && filterData.length>0){
+            data=filterData;
+        }
         let id = [];
         let cList = [];
-        console.log(filterData);
-        filterData.forEach(data=>{
+        console.log(data);
+        data.forEach(data=>{
             data.contacts.forEach(contact=>{
                 if(id.indexOf(contact.id)<=-1){
                     id.push(contact.id);

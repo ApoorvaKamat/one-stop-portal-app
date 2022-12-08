@@ -5,6 +5,36 @@ const initialState = {
   UserName: 'Apoorva',
   showModal: true,
   login:false,
+  getExpertName:'',
+  activeNavPage:'',
+  isMeetingScheduled:
+    {
+        'Sajal Suhane':{
+            isSet:false,
+            meetingDate: '',
+        },
+        'Apoorva Kamat':{
+            isSet:false,
+            meetingDate: '',
+        },
+        'Jin Ryong Kim':{
+            isSet:false,
+            meetingDate: '',
+        },
+        'Yatharth Singhal':{
+            isSet:false,
+            meetingDate: '',
+        },
+        'Yash Pratapwar':{
+            isSet:false,
+            meetingDate: '',
+        },
+        'Anusri Yarlagadda':{
+            isSet:false,
+            meetingDate: '',
+        },
+    }
+
 }
 
 export const Context = createContext(initialState) // <- initialize Context using initialState
@@ -19,7 +49,12 @@ export const Store = ({ children }) => {
             return { ...state, UserName: action.payload }
           case 'set_login':
             return {...state,login:action.payload}
-          
+          case 'set_expert_name':
+            return {...state,getExpertName:action.payload}
+          case 'set_active_Nav_page' :
+            return {...state,activeNavPage:action.payload}
+          case 'set_meeting_schedule':
+            return {...state,isMeetingScheduled:action.payload};
           default:
             return state
         }
